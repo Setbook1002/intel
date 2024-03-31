@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking Space Booking</title>
+    <style>
+        body {
+            background-image: url("x.jpg");
+            padding: 10px;
+            margin: 0; /* Reset default margin */
+            font-family: Arial, sans-serif; /* Define a fallback font */
+        }
+        h1 {
+            text-align: center;
+            color: blue;
+        }
+        /* Navbar styles */
+        .navbar {
+            background-color: #333;
+            overflow: hidden; /* Clear floats */
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #555; /* Change color on hover */
+        }
+        p {
+            text-align: center;
+            color: rgb(206, 9, 140);
+        }
+        ol {
+            margin-left: 20px; /* Adjust margin for nested lists */
+        }
+        .img {
+            text-align: center;
+        }
+        .img img {
+            margin: 10px; /* Add spacing between images */
+            max-width: 100%; /* Ensure images don't overflow */
+            height: auto; /* Maintain aspect ratio */
+        }
+        /* Booking form styles */
+        .booking-form {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .booking-form input[type="text"],
+        .booking-form input[type="email"],
+        .booking-form select {
+            padding: 10px;
+            margin: 5px;
+            width: 100%; /* Adjust to full width */
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .booking-form input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .booking-form input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="newBook.html">Booking</a>
+        <a href="contacts.html">Contact us</a>
+        <a href="A.HTML">Login</a>
+        <a href="flamingo.html">Booked spaces</a>
+    </div>
+    <hr>
+    <h1>Parking Space Booking</h1>
+    <ol type="i">
+        <li>Go to the nav bar on top of your menu and click it locate the booking option within the navigation menu</li>
+        <li>locate the booking option within the navigation menu</li>
+        <li>Explore the booking options and choose your location
+            <ul> <!-- Nested list for sub-steps -->
+                <li>choose your location and time duration you are going to take on the parking zone</li>
+            </ul>
+        </li>
+    </ol>
+    <div class="img">
+        <!-- Existing images remain unchanged -->
+    </div>
+    <!-- Booking form section -->
+    <div class="booking-form">
+        <h2>Book Your Parking Space</h2>
+        <form id="bookingForm" action="#" method="post" onsubmit="return validateForm()">
+            <input type="text" name="name" placeholder="Your Name" required><br>
+            <input type="email" name="email" placeholder="Your Email" required><br>
+            <select name="location" required>
+                <option value="">Select Location</option>
+                <option value="location1">Location 1</option>
+                <option value="location2">Location 2</option>
+                <option value="location3">Location 3</option>
+            </select><br>
+            <input type="text" name="duration" placeholder="Duration (e.g., 3 hours)" required><br>
+            <input type="submit" value="Book Now">
+        </form>
+    </div>
+    <script>
+        function validateForm() {
+            var name = document.forms["bookingForm"]["name"].value;
+            var email = document.forms["bookingForm"]["email"].value;
+            var location = document.forms["bookingForm"]["location"].value;
+            var duration = document.forms["bookingForm"]["duration"].value;
+            if (name == "" || email == "" || location == "" || duration == "") {
+                alert("All fields must be filled out");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
